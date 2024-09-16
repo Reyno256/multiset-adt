@@ -25,5 +25,13 @@ public class TreeMultiSet extends MultiSet {
     boolean contains(Integer item){
         return this._tree.contains(item);
     }
+    @Override
+    boolean is_empty(){
+        return this._tree.is_empty();
+    }
+    @Override
+    int count(Integer item){
+        return this._tree.count(item);
+    }
 
 }
