@@ -17,8 +17,25 @@ public class Tree {
     }
     public Tree(int root) {
         this.root = root;
-        this.subtrees = ArrayList(Tree);
+    }
 
+   /* public boolean isEmpty(){
+        // return whether the tree is empty
+        if (root  )
+            return true;
+            return false;
+    }*/
+    public int length(){
+        if (subtrees == null){
+            return 1;
+        }
+        else {
+            int size = 1;
+            for (Tree subtree : subtrees) {
+                size += subtree.length();
+            }
+            return size;
+        }
     }
     // TODO complete this Tree class to replicate the implementation from the Tree class in adts.py
 }
